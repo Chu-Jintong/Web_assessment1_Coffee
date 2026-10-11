@@ -4,55 +4,367 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee Cafe</title>
-  <meta http-equiv="refresh" content="0; url=./coffee_cafe_sample_layout.html">
   <style>
     body {
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #faf6f0;
+      font-family: Arial, sans-serif;
+      background-color: #f7efe6;
       color: #3e2723;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .card {
-      max-width: 560px;
-      padding: 32px;
-      border: 1px solid #e3cfbc;
-      border-radius: 16px;
-      background: #fffaf7;
-      text-align: center;
-      box-shadow: 0 12px 28px rgba(62, 39, 35, 0.08);
+    .page {
+      max-width: 1000px;
+      margin: 20px auto;
+      background-color: #f5e6d3;
+      border: 1px solid #d6bfa8;
+      box-shadow: 0 8px 24px rgba(62, 39, 35, 0.12);
     }
 
-    h1 {
-      margin: 0 0 12px;
+    .header {
+      background-color: #3e2723;
+      color: white;
+      padding: 20px 30px;
+    }
+
+    .header h1 {
+      margin: 0 0 10px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 32px;
+      font-size: 30px;
     }
 
-    p {
+    .header p {
+      margin: 0 0 14px;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 14px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav a:hover {
+      border-bottom-color: #d4a574;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f9f2ea;
+      border-top: 1px solid #d6bfa8;
+      border-bottom: 1px solid #d6bfa8;
+    }
+
+    .hero-text {
+      flex: 1 1 420px;
+      padding: 35px 30px;
+    }
+
+    .hero-text h2 {
       margin: 0 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      max-width: 440px;
+      margin-bottom: 22px;
       line-height: 1.6;
     }
 
-    a {
+    .hero-notes {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #6d5147;
+    }
+
+    .hero-notes span {
+      display: inline-block;
+      margin-right: 12px;
+      margin-bottom: 8px;
+      padding: 6px 10px;
+      background-color: #efe0d0;
+      border: 1px solid #d6bfa8;
+      border-radius: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 18px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 20px;
+    }
+
+    .button-primary {
+      background-color: #d4a574;
       color: #3e2723;
-      font-weight: 700;
+      font-weight: bold;
+    }
+
+    .button-secondary {
+      border: 1px solid #3e2723;
+      color: #3e2723;
+    }
+
+    .hero-image {
+      flex: 1 1 320px;
+      min-height: 260px;
+    }
+
+    .hero-image img,
+    .card-image img,
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+    }
+
+    .section p {
+      margin: 0 0 14px;
+      line-height: 1.6;
+    }
+
+    .menu-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .card {
+      flex: 1 1 220px;
+      background-color: #fffaf5;
+      border: 1px solid #d8c4b2;
+      box-shadow: 0 4px 12px rgba(62, 39, 35, 0.08);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .card-image {
+      height: 160px;
+      background-color: #d8b89a;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+    }
+
+    .price {
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .box {
+      flex: 1 1 320px;
+      background-color: #fffaf5;
+      border: 1px solid #d8c4b2;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(62, 39, 35, 0.08);
+      border-radius: 18px;
+    }
+
+    .image-box {
+      flex: 1 1 320px;
+      min-height: 260px;
+      background-color: #d7b18c;
+      border: 1px solid #d8c4b2;
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+
+    .footer {
+      background-color: #3e2723;
+      color: white;
+      padding: 18px 30px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin-right: 12px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        margin: 10px;
+      }
+
+      .hero-text,
+      .content {
+        padding: 20px;
+      }
+
+      .hero-text h2 {
+        font-size: 30px;
+      }
     }
   </style>
-  <script>
-    window.location.replace("./coffee_cafe_sample_layout.html");
-  </script>
 </head>
 <body>
-  <main class="card">
-    <h1>Coffee Cafe</h1>
-    <p>Redirecting to the final sample homepage layout...</p>
-    <p>If the page does not open automatically, use this link:</p>
-    <p><a href="./coffee_cafe_sample_layout.html">Open the Coffee Cafe layout</a></p>
-  </main>
+  <div class="page">
+    <div class="header">
+      <h1>Coffee Cafe</h1>
+      <p>PALMERSTON NORTH NEIGHBOURHOOD CAFE</p>
+      <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#visit">Visit Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero" id="home">
+      <div class="hero-text">
+        <h2>Fresh Coffee, Warm Moments</h2>
+        <p>
+          Enjoy handcrafted coffee, fresh cabinet food, and a welcoming local atmosphere
+          in Palmerston North.
+        </p>
+        <a class="button button-primary" href="#menu">Explore Our Menu</a>
+        <a class="button button-secondary" href="#visit">Visit Us</a>
+        <div class="hero-notes">
+          <span>Open 7 Days</span>
+          <span>Local Cafe</span>
+          <span>Dine In & Takeaway</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="./images/hero.jpg" alt="Coffee cafe interior">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="section" id="menu">
+        <h2>Featured Menu</h2>
+        <p>
+          This section highlights a few popular drinks and snacks so visitors can quickly
+          see what Coffee Cafe offers.
+        </p>
+
+        <div class="menu-cards">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/cappuccino.jpg" alt="Cappuccino">
+            </div>
+            <div class="card-content">
+              <h3>Cappuccino</h3>
+              <p>Smooth espresso with creamy milk foam and a warm coffee flavour.</p>
+              <div class="price">$5.50</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/mocha.jpg" alt="Mocha">
+            </div>
+            <div class="card-content">
+              <h3>Mocha</h3>
+              <p>Rich coffee with chocolate flavour, suitable for a sweet coffee break.</p>
+              <div class="price">$6.00</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/muffin.jpg" alt="Blueberry muffin">
+            </div>
+            <div class="card-content">
+              <h3>Blueberry Muffin</h3>
+              <p>A sweet snack that goes well with coffee and is easy to choose at a glance.</p>
+              <div class="price">$4.80</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section two-column" id="about">
+        <div class="box">
+          <h2>About Coffee Cafe</h2>
+          <p>
+            Coffee Cafe is a welcoming local coffee bar in Palmerston North. It offers quality
+            drinks, light food, and a comfortable place for customers to relax, meet friends,
+            or study.
+          </p>
+          <p>
+            The layout uses warm colours, simple navigation, and short content blocks so the
+            page feels friendly and easy to use.
+          </p>
+        </div>
+
+        <div class="image-box">
+          <img src="./images/about.jpg" alt="Cafe counter">
+        </div>
+      </div>
+
+      <div class="section two-column" id="visit">
+        <div class="box">
+          <h2>Visit Us</h2>
+          <ul>
+            <li><strong>Location:</strong> Palmerston North neighbourhood</li>
+            <li><strong>Opening Hours:</strong> Mon - Fri: 8:00 AM - 6:00 PM</li>
+            <li><strong>Weekend Hours:</strong> Sat - Sun: 9:00 AM - 5:00 PM</li>
+            <li><strong>Phone:</strong> 06-123-4567</li>
+            <li><strong>Email:</strong> info@coffeecafe.co.nz</li>
+          </ul>
+        </div>
+
+        <div class="image-box">
+          <img src="./images/visit.jpg" alt="Coffee cafe exterior">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" id="contact">
+      <div>Coffee Cafe | Follow us on social media | © 2026 Coffee Cafe</div>
+      <div style="margin-top: 8px;">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

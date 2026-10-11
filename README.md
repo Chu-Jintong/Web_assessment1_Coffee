@@ -1,7 +1,7 @@
 # Web Assessment 1 - Coffee Cafe
 
-This repository contains our group work for Web Assessment 1.  
-The project is based on the Coffee Cafe website design task and includes the written analysis report, the sample homepage layout, and the final layout screenshot.
+This repository contains our group project for Web Assessment 1.  
+The project is based on the Coffee Cafe website design brief and includes the written analysis report, the sample homepage layout, presentation materials, and webpage assets.
 
 ## Group Members
 
@@ -13,18 +13,27 @@ The project is based on the Coffee Cafe website design task and includes the wri
 ## Project Topic
 
 Coffee Cafe is a locally owned coffee bar in a Palmerston North neighbourhood.  
-The purpose of this project is to design a website that promotes the cafe, presents key customer information clearly, and appeals to its target audience.
+The purpose of this project is to design a website that promotes the cafe, clearly presents key customer information, and appeals to its target audience.
 
-## Files in This Repository
+## Main Files
 
-- `Coffee Cafe is a locally owned coffee bar in a Pal.docx`  
-  Final written report for the assignment.
+- `Coffee Cafe Website Design Analysis Report(2).docx`  
+  Final written analysis report.
+
+- `index.html`  
+  Main homepage file for GitHub Pages.
 
 - `coffee_cafe_sample_layout.html`  
-  Sample homepage layout for the Coffee Cafe website.
+  Duplicate layout file kept for the project record.
+
+- `images/`  
+  Image folder used by the homepage layout.
 
 - `coffee_cafe_sample_layout_landscape_fullfit.png`  
-  Final screenshot of the homepage layout.
+  Screenshot of the homepage layout.
+
+- `副本副本美化PPT版本_审核修正版.pptx`  
+  Final presentation file.
 
 ## Design Summary
 
@@ -32,8 +41,9 @@ The purpose of this project is to design a website that promotes the cafe, prese
 - Navigation: Home, Menu, About, Visit Us, Contact
 - Main sections: Header, Hero, Featured Menu, About, Visit Us, Footer
 - Colour scheme: deep coffee brown, caramel, warm beige, creamy white, taupe brown
-- Fonts: Playfair Display style for headings, Lato/Helvetica style for body text
+- Fonts: serif style for headings and a simple sans-serif font for body text
 
-## Notes
+## Project Notes
 
-The sample layout was designed to be warm, visually clear, and suitable for local residents, students, and working adults. The design focuses on readability, simple navigation, and a welcoming coffee cafe atmosphere.
+The sample layout was designed to look warm, readable, and suitable for local residents, students, and working adults.  
+The design focuses on simple navigation, clear content sections, and a friendly coffee cafe atmosphere.
