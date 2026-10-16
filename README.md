@@ -17,14 +17,11 @@ The purpose of this project is to design a website that promotes the cafe, clear
 
 ## Main Files
 
-- `Coffee Cafe Website Design Analysis Report(2).docx`  
+- `WebAssignment1_CoffeeCafe_GroupW_Analysis_Report.docx`  
   Final written analysis report.
 
 - `index.html`  
   Main homepage file for GitHub Pages.
-
-- `coffee_cafe_sample_layout.html`  
-  Duplicate layout file kept for the project record.
 
 - `images/`  
   Image folder used by the homepage layout.
@@ -32,7 +29,7 @@ The purpose of this project is to design a website that promotes the cafe, clear
 - `coffee_cafe_sample_layout_landscape_fullfit.png`  
   Screenshot of the homepage layout.
 
-- `副本副本美化PPT版本_审核修正版.pptx`  
+- `WebAssignment1_CoffeeCafe_GroupW_Presentation.pptx`  
   Final presentation file.
 
 ## Design Summary
