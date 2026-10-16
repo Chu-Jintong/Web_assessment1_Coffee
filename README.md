@@ -35,7 +35,7 @@ The purpose of this project is to design a website that promotes the cafe, clear
 - Navigation: Home, Menu, About, Visit Us, Contact
 - Main sections: Header, Hero, Featured Menu, About, Visit Us, Footer
 - Colour scheme: deep coffee brown, caramel, warm beige, creamy white, taupe brown
-- Fonts: serif style for headings and a simple sans-serif font for body text
+- Fonts: Playfair Display style for headings and a simple sans-serif  font and Lato font for body text
 
 ## Project Notes
 
