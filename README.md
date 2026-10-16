@@ -26,9 +26,6 @@ The purpose of this project is to design a website that promotes the cafe, clear
 - `images/`  
   Image folder used by the homepage layout.
 
-- `coffee_cafe_sample_layout_landscape_fullfit.png`  
-  Screenshot of the homepage layout.
-
 - `WebAssignment1_CoffeeCafe_GroupW_Presentation.pptx`  
   Final presentation file.
 
