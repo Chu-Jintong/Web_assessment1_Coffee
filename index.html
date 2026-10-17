@@ -6,7 +6,21 @@
   <title>Coffee Cafe</title>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap");
-
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      padding: 10px 14px;
+      background-color: #fffaf5;
+      color: #3e2723;
+      border: 1px solid #d6bfa8;
+      border-radius: 10px;
+      text-decoration: none;
+      z-index: 1000;
+    }
+    .skip-link:focus {
+      top: 12px;
+    }
     body {
       margin: 0;
       font-family: "Lato", Arial, sans-serif;
@@ -198,6 +212,28 @@
       font-size: 14px;
       line-height: 1.7;
     }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-bottom: 14px;
+    }
+    .footer-column {
+      flex: 1 1 180px;
+    }
+    .footer-column h3 {
+      margin: 0 0 8px;
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      font-size: 18px;
+    }
+    .footer-column ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .footer-column li {
+      margin-bottom: 6px;
+    }
     .footer a {
       color: white;
       text-decoration: underline;
@@ -217,6 +253,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="page">
     <header class="header">
       <h1>Coffee Cafe</h1>
@@ -231,7 +268,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main-content">
       <section class="hero" id="home">
         <div class="hero-text">
          <h2>Good Coffee, No Fuss</h2>
@@ -246,6 +283,7 @@
          <span>Open 7 Days</span>
          <span>Beans Roasted In-Store</span>
          <span>Dine In &amp; Takeaway</span>
+         <span>Free Wi-Fi Available</span>
          </div>
         </div>
         <div class="hero-image">
@@ -331,8 +369,35 @@
       </div>
     </main>
     <footer class="footer" id="contact">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#visit">Visit Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:info@coffeecafe.co.nz">info@coffeecafe.co.nz</a></li>
+            <li><a href="tel:+6461234567">06-123-4567</a></li>
+            <li><a href="#visit">Opening Hours</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
       <div>&copy; 2026 Coffee Cafe. All rights reserved.</div>
-      <div>Last updated: 16 October 2026</div>
+      <div>Last updated: 17 October 2026</div>
       <div>Contact email: <a href="mailto:info@coffeecafe.co.nz">info@coffeecafe.co.nz</a></div>
     </footer>
   </div>
